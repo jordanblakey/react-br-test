@@ -16,16 +16,32 @@ class FooterNav extends Component {
     this.handleInternetsClick = this.handleInternetsClick.bind(this)
   }
 
+  componentWillMount() {
+    if (
+      window.location.href.split('/').pop() === 'lunch' &&
+      this.state.lunchActive === false
+    ) {
+      this.setState({ lunchActive: true })
+    }
+
+    if (
+      window.location.href.split('/').pop() === 'internets' &&
+      this.state.internetsActive === false
+    ) {
+      this.setState({ internetsActive: true })
+    }
+  }
+
   componentDidUpdate() {
     if (
-      window.location.href !== 'http://localhost:3000/internets' &&
+      window.location.href.split('/').pop() !== 'internets' &&
       this.state.internetsActive === true
     ) {
       this.setState({ internetsActive: false })
     }
 
     if (
-      window.location.href !== 'http://localhost:3000/lunch' &&
+      window.location.href.split('/').pop() !== 'lunch' &&
       this.state.lunchActive === true
     ) {
       this.setState({ lunchActive: false })
