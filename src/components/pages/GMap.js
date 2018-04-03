@@ -4,6 +4,10 @@ import { Row, Column } from 'react-foundation'
 import basicRequest from '../../controllers/basic-request'
 
 class GMap extends Component {
+  componentDidMount() {
+    basicRequest()
+  }
+
   render() {
     return (
       <Row>
@@ -15,7 +19,5 @@ class GMap extends Component {
     )
   }
 }
-
-basicRequest()
 
 export default GMap

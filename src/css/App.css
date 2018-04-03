@@ -5670,13 +5670,16 @@ a.thumbnail {
   .navbar > div img {
     height: 32px;
     margin-bottom: 0.25rem; }
+  .navbar > div a {
+    display: block; }
   .navbar > div:last-child {
     text-align: right; }
   .navbar > div .pageTitle {
-    font-weight: 600;
-    font-size: 17px;
+    font-weight: 500;
+    font-size: 20px;
     text-align: center;
-    line-height: 32px; }
+    line-height: 32px;
+    letter-spacing: 0.05rem; }
 
 .footerNav {
   background: #2a2a2a;
@@ -5688,12 +5691,19 @@ a.thumbnail {
   left: 0; }
   .footerNav > div {
     text-align: center;
-    font-size: 10px; }
+    font-size: 12px; }
     .footerNav > div.inactive {
+      transition-property: opacity;
+      transition-timing-function: ease-in;
+      transition-duration: 0.2s;
       opacity: 0.6; }
+    .footerNav > div a {
+      display: block; }
     .footerNav > div img {
       height: 32px;
       margin-bottom: 0.25rem; }
 
-.basicExample {
+.page {
   margin-top: 76px; }
+  .page .row:first-of-type {
+    padding-top: 0.75rem; }

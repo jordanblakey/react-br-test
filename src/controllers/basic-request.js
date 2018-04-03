@@ -8,7 +8,6 @@ const basicRequest = () =>
       if (err) {
         return console.log(err)
       }
-      console.log(body.url)
       let print = JSON.stringify(body, null, 2)
       document.getElementById('response').innerHTML = '<pre>' + print + '</pre>'
     }

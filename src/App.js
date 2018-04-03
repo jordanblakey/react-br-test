@@ -2,7 +2,7 @@ import 'foundation-icons/foundation-icons.css'
 import './css/App.css'
 
 import React, { Component } from 'react'
-import { Link, Route } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 
 // Navigation
 import Navbar from './components/Navbar'
@@ -18,21 +18,7 @@ class App extends Component {
     return (
       <div className="App">
         <Navbar />
-        <div className="basicExample">
-          <ul>
-            <li>
-              <Link to="/">Gmap</Link>
-            </li>
-            <li>
-              <Link to="/lunch">Lunch</Link>
-            </li>
-            <li>
-              <Link to="/internets">Internets</Link>
-            </li>
-          </ul>
-
-          <hr />
-
+        <div className="page">
           <Route exact path="/" component={GMap} />
           <Route path="/lunch" component={Lunch} />
           <Route path="/internets" component={Internets} />
