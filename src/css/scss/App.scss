@@ -5,3 +5,54 @@
 @include foundation-flex-grid;
 @include foundation-flex-classes;
 @include foundation-everything;
+
+.navbar {
+  background: $primary-color;
+  color: white;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  padding: 2rem 0.75rem 0.25rem 0.75rem;
+  > div {
+    img {
+      height: 32px;
+      margin-bottom: 0.25rem;
+    }
+    &:last-child {
+      text-align: right;
+    }
+    .pageTitle {
+      font-weight: 600;
+      font-size: 17px;
+      text-align: center;
+      line-height: 32px;
+    }
+  }
+}
+
+.footerNav {
+  background: $dark-gray;
+  color: white;
+  position: fixed;
+  // height: 50px;
+  padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  > div {
+    text-align: center;
+    font-size: 10px;
+    &.inactive {
+      opacity: 0.6;
+    }
+    img {
+      height: 32px;
+      margin-bottom: 0.25rem;
+    }
+  }
+}
+
+.basicExample {
+  margin-top: 76px;
+}

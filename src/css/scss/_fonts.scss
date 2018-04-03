@@ -38,6 +38,32 @@
 
 @font-face {
   font-family: 'avenir-next';
+  src: url('fonts/avenir-next/avenir-next-demibold.eot');
+  src: url('fonts/avenir-next/avenir-next-demibold.eot')
+      format('embedded-opentype'),
+    url('fonts/avenir-next/avenir-next-demibold.woff') format('woff'),
+    url('fonts/avenir-next/avenir-next-demibold.ttf') format('truetype'),
+    url('fonts/avenir-next/avenir-next-demibold.svg#AvenirNextLTW01BoldRegular')
+      format('svg');
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'avenir-next';
+  src: url('fonts/avenir-next/avenir-next-medium.eot');
+  src: url('fonts/avenir-next/avenir-next-medium.eot')
+      format('embedded-opentype'),
+    url('fonts/avenir-next/avenir-next-medium.woff') format('woff'),
+    url('fonts/avenir-next/avenir-next-medium.ttf') format('truetype'),
+    url('fonts/avenir-next/avenir-next-medium.svg#AvenirNextLTW01BoldRegular')
+      format('svg');
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'avenir-next';
   src: url('fonts/avenir-next/avenir-next-thin.eot');
   src: url('fonts/avenir-next/avenir-next-thin.eot') format('embedded-opentype'),
     url('fonts/avenir-next/avenir-next-thin.woff') format('woff'),
