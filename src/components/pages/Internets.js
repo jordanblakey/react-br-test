@@ -5,7 +5,11 @@ class Internets extends Component {
   render() {
     return (
       <div className="internets">
-        <h1>Loading...</h1>
+        <div className="subpageLoader">
+          <div className="container">
+            <div className="loader" />
+          </div>
+        </div>
         <Iframe
           url="https://www.bottlerocketstudios.com/contact"
           width="100%"

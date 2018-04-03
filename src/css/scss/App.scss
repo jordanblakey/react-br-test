@@ -8,6 +8,8 @@
 
 @import 'spashscreen.scss';
 
+// Navigation
+
 .navbar {
   background: $primary-color;
   color: white;
@@ -68,22 +70,27 @@
   }
 }
 
+// Content
+
 .page {
   margin-top: 76px;
   .row:first-of-type {
     padding-top: 0.75rem;
   }
 
-  .internets {
+  .subpageLoader {
     background: $primary-color;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    bottom: 0;
+    pointer-events: none;
+    text-align: center;
     h1 {
-      text-align: center;
-      position: absolute;
-      pointer-events: none;
-      width: 100vw;
       font-weight: 100;
       top: 0;
-      line-height: 100vh;
+      line-height: 100%;
       color: white;
     }
   }
