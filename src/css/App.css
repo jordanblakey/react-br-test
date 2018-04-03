@@ -5669,13 +5669,13 @@ a.thumbnail {
     visibility: hidden; } }
 
 .splashScreen {
-  position: absolute;
+  position: fixed;
   background: #43e895;
   width: 100%;
   height: 100%;
   left: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 99;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
   animation-name: splashScreen;
   animation-duration: 2s;
@@ -5774,13 +5774,15 @@ a.thumbnail {
   margin-top: 76px; }
   .page .row:first-of-type {
     padding-top: 0.75rem; }
+  .page .internets {
+    height: 100%; }
   .page .subpageLoader {
     background: #43e895;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    bottom: 0;
+    height: 90vh;
+    width: 100%;
     pointer-events: none;
     text-align: center; }
     .page .subpageLoader h1 {
@@ -5805,3 +5807,30 @@ a.thumbnail {
       margin-bottom: 0; }
   .page .selectedRestaurantInfo {
     padding-top: 1rem; }
+  .page .restaurantListItem {
+    background: none;
+    color: white;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; }
+    .page .restaurantListItem h2 {
+      font-weight: 500;
+      margin: 0 0 0 .75rem; }
+    .page .restaurantListItem h3 {
+      margin: 0 0 .75rem .75rem; }
+    .page .restaurantListItem img {
+      position: absolute;
+      height: 20vh;
+      width: 100%;
+      object-fit: cover;
+      z-index: -2; }
+  .page .restaurantListItem::after {
+    display: block;
+    position: relative;
+    background-image: linear-gradient(to bottom, transparent 30%, rgba(0, 0, 0, 0.8) 100%);
+    margin-top: -20vh;
+    height: 20vh;
+    width: 100%;
+    z-index: -1;
+    content: ' '; }

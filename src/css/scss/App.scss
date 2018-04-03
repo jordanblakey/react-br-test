@@ -78,13 +78,17 @@
     padding-top: 0.75rem;
   }
 
+  .internets {
+    height: 100%;
+  }
+
   .subpageLoader {
     background: $primary-color;
-    position: absolute;
-    width: 100%;
-    height: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
-    bottom: 0;
+    height: 90vh;
+    width: 100%;
     pointer-events: none;
     text-align: center;
     h1 {
@@ -116,5 +120,40 @@
   }
   .selectedRestaurantInfo {
     padding-top: 1rem;
+  }
+
+
+  .restaurantListItem {
+    background: none;
+    color: white;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    h2 {
+      font-weight: 500;
+      margin: 0 0 0 .75rem;
+    }
+    h3 {
+      margin: 0 0 .75rem .75rem;
+    }
+    img {
+      position: absolute;
+      height: 20vh;
+      width: 100%;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+  }
+  .restaurantListItem::after {
+      display: block;
+      position: relative;
+      background-image: linear-gradient(to bottom, transparent 30%, rgba(0,0,0, 0.8) 100%);
+      margin-top: -20vh;
+      height: 20vh;
+      width: 100%;
+      z-index: -1;
+      content: ' ';
   }
 }

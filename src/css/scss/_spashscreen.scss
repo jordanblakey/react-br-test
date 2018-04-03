@@ -14,13 +14,13 @@
 }
 
 .splashScreen {
-  position: absolute;
+  position: fixed;
   background: $primary-color;
   width: 100%;
   height: 100%;
   left: 0;
   bottom: 0;
-  z-index: 1;
+  z-index: 99;
   transition-timing-function: cubic-bezier(1, 0, 0, 1);
   animation-name: splashScreen;
   animation-duration: 2s;
