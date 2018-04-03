@@ -1,0 +1,80 @@
+// Splash Screen
+
+@keyframes splashScreen {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.splashScreen {
+  position: absolute;
+  background: $primary-color;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  bottom: 0;
+  z-index: 1;
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+  animation-name: splashScreen;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+  h1 {
+    color: white;
+    font-size: 2.6rem;
+    text-align: center;
+    font-weight: 500;
+    line-height: 100vh;
+  }
+
+  #loader {
+    width: 70px;
+    height: 70px;
+    border-style: solid;
+    border-top-color: #fff;
+    border-right-color: #fff;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    border-radius: 50%;
+    box-sizing: border-box;
+    animation: rotate 3s ease-in-out infinite;
+    transform: rotate(-200deg);
+  }
+
+  #container {
+    width: 70px;
+    height: 35px;
+    overflow: hidden;
+    position: absolute;
+    top: calc(50% + 40px);
+    left: calc(50% - 35px);
+    transform: rotateZ(180deg) rotateY(180deg);
+  }
+
+  @keyframes rotate {
+    0% {
+      border-width: 10px;
+    }
+    25% {
+      border-width: 3px;
+    }
+    50% {
+      transform: rotate(115deg);
+      border-width: 10px;
+    }
+    75% {
+      border-width: 3px;
+    }
+    100% {
+      border-width: 10px;
+    }
+  }
+}

@@ -5,6 +5,7 @@ import React, { Component } from 'react'
 import { Route } from 'react-router-dom'
 
 // Navigation
+import SplashScreen from './components/SplashScreen'
 import Navbar from './components/Navbar'
 import FooterNav from './components/FooterNav'
 
@@ -17,6 +18,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <SplashScreen />
         <Navbar />
         <div className="page">
           <Route exact path="/" component={GMap} />

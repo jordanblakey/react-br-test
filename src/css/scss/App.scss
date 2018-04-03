@@ -6,6 +6,8 @@
 @include foundation-flex-classes;
 @include foundation-everything;
 
+@import 'spashscreen.scss';
+
 .navbar {
   background: $primary-color;
   color: white;
@@ -31,6 +33,7 @@
       text-align: center;
       line-height: 32px;
       letter-spacing: 0.05rem;
+      color: white;
     }
   }
 }
@@ -39,7 +42,6 @@
   background: $dark-gray;
   color: white;
   position: fixed;
-  // height: 50px;
   padding: 0.75rem 0.75rem 0.25rem 0.75rem;
   bottom: 0;
   right: 0;
@@ -55,6 +57,7 @@
     }
     a {
       display: block;
+      color: white;
     }
 
     img {

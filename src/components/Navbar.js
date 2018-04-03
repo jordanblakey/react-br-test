@@ -29,7 +29,9 @@ class Navbar extends Component {
           <img src={icon_close} alt="close icon" className="is-hidden" />
         </Column>
         <Column small={6}>
-          <h1 className="pageTitle">Lunch Tyme</h1>
+          <Link to="/">
+            <h1 className="pageTitle">Lunch Tyme</h1>
+          </Link>
         </Column>
         <Column small={3}>
           <Link to="/">
