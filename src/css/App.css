@@ -5753,7 +5753,6 @@ a.thumbnail {
   background: #2a2a2a;
   color: white;
   position: fixed;
-  overflow: scroll;
   z-index: 10;
   padding: 0.75rem 0.75rem 0.25rem 0.75rem;
   bottom: 0;
@@ -5773,9 +5772,6 @@ a.thumbnail {
     .footerNav > div img {
       height: 32px;
       margin-bottom: 0.25rem; }
-
-.App {
-  height: 100vh; }
 
 .page {
   margin-top: 60px;
@@ -5821,7 +5817,8 @@ a.thumbnail {
     padding-top: 1rem; }
   .page .mapContainer {
     position: relative;
-    overflow: hidden; }
+    overflow-x: hidden;
+    height: calc(100vh - 129px); }
   .page #listDrawer {
     position: absolute;
     left: 90vw;
