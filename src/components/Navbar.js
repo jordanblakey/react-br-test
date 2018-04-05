@@ -19,26 +19,28 @@ class Navbar extends Component {
 
   render() {
     return (
-      <Row className="navbar">
-        <Column small={3}>
-          <div onClick={this.handleBackClick}>
-            <img src={icon_back} alt="back icon" className="is-visible" />
-          </div>
-          <img src={icon_refresh} alt="refresh icon" className="is-hidden" />
-          <img src={icon_forward} alt="forward icon" className="is-hidden" />
-          <img src={icon_close} alt="close icon" className="is-hidden" />
-        </Column>
-        <Column small={6}>
-          <Link to="/">
-            <h1 className="pageTitle">Lunch Tyme</h1>
-          </Link>
-        </Column>
-        <Column small={3}>
-          <Link to="/">
-            <img src={icon_map} alt="map icon" />
-          </Link>
-        </Column>
-      </Row>
+      <div>
+        <Row className="navbar">
+          <Column small={3}>
+            <div onClick={this.handleBackClick}>
+              <img src={icon_back} alt="back icon" className="is-visible" />
+            </div>
+            <img src={icon_refresh} alt="refresh icon" className="is-hidden" />
+            <img src={icon_forward} alt="forward icon" className="is-hidden" />
+            <img src={icon_close} alt="close icon" className="is-hidden" />
+          </Column>
+          <Column small={6}>
+            <Link to="/map">
+              <h1 className="pageTitle">Lunch Tyme</h1>
+            </Link>
+          </Column>
+          <Column small={3}>
+            <Link to="/map">
+              <img src={icon_map} alt="map icon" />
+            </Link>
+          </Column>
+        </Row>
+      </div>
     )
   }
 }

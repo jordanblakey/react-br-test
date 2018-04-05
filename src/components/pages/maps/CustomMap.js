@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react'
+import marker from '../../../img/ic_marker-active.svg'
 
 class MapContainer extends Component {
   constructor(props) {
@@ -7,7 +8,8 @@ class MapContainer extends Component {
     this.state = {
       showingInfoWindow: false,
       activeMarker: {},
-      selectedPlace: {}
+      selectedPlace: {},
+      list: this.props.list
     }
 
     // binding this to event-handler functions
@@ -32,14 +34,36 @@ class MapContainer extends Component {
     }
   }
 
+  componentDidMount() {
+    // console.log('Lat:', this.props.list[0].location.lat)
+    // console.log('Long:', this.props.list[0].location.lng)
+  }
+
   render() {
     return (
       <Map
         className="googleMap"
         google={this.props.google}
         onClick={this.onMapClicked}
+        initialCenter={{
+          lat: localStorage.getItem('lat'),
+          lng: localStorage.getItem('lng')
+        }}
+        zoom={10}
       >
-        <Marker onClick={this.onMarkerClick} name={'Current location'} />
+        <Marker
+          onClick={this.onMarkerClick}
+          name={localStorage.getItem('name')}
+          icon={{
+            url: marker,
+            anchor: new this.props.google.maps.Point(30, 60),
+            scaledSize: new this.props.google.maps.Size(60, 60)
+          }}
+          position={{
+            lat: localStorage.getItem('lat'),
+            lng: localStorage.getItem('lng')
+          }}
+        />
 
         <InfoWindow
           marker={this.state.activeMarker}

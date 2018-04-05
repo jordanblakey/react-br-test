@@ -1,0 +1,38 @@
+<svg width="100" height="100" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+<title>ic_marker-active</title>
+<desc>Created using Figma</desc>
+<g id="Canvas" transform="translate(-190 822)">
+<clipPath id="clip-0" clip-rule="evenodd">
+<path d="M 190 -822L 290 -822L 290 -722L 190 -722L 190 -822Z" fill="#FFFFFF"/>
+</clipPath>
+<g id="ic_marker-active" clip-path="url(#clip-0)">
+<g id="Ellipse">
+<use xlink:href="#path0_fill" transform="translate(190 -822)" fill="#008AE6" fill-opacity="0.2"/>
+</g>
+<g id="Ellipse" filter="url(#filter0_d)">
+<use xlink:href="#path1_fill" transform="translate(226 -786)" fill="#008AE6"/>
+<mask id="mask0_outline_out">
+<rect id="mask0_outline_inv" fill="white" x="-8" y="-8" width="44" height="44" transform="translate(226 -786)"/>
+<use xlink:href="#path1_fill" fill="black" transform="translate(226 -786)"/>
+</mask>
+<g mask="url(#mask0_outline_out)">
+<use xlink:href="#path2_stroke_2x" transform="translate(226 -786)" fill="#FFFFFF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<filter id="filter0_d" filterUnits="userSpaceOnUse" x="208" y="-802" width="64" height="64" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 255 0"/>
+<feOffset dx="0" dy="2"/>
+<feGaussianBlur stdDeviation="5"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.4 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+</filter>
+<path id="path0_fill" d="M 100 50C 100 77.6142 77.6142 100 50 100C 22.3858 100 0 77.6142 0 50C 0 22.3858 22.3858 0 50 0C 77.6142 0 100 22.3858 100 50Z"/>
+<path id="path1_fill" d="M 28 14C 28 21.732 21.732 28 14 28C 6.26801 28 0 21.732 0 14C 0 6.26801 6.26801 0 14 0C 21.732 0 28 6.26801 28 14Z"/>
+<path id="path2_stroke_2x" d="M 20 14C 20 17.3137 17.3137 20 14 20L 14 36C 26.1503 36 36 26.1503 36 14L 20 14ZM 14 20C 10.6863 20 8 17.3137 8 14L -8 14C -8 26.1503 1.84974 36 14 36L 14 20ZM 8 14C 8 10.6863 10.6863 8 14 8L 14 -8C 1.84974 -8 -8 1.84974 -8 14L 8 14ZM 14 8C 17.3137 8 20 10.6863 20 14L 36 14C 36 1.84974 26.1503 -8 14 -8L 14 8Z"/>
+</defs>
+</svg>

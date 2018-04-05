@@ -21,8 +21,8 @@ class App extends Component {
         <SplashScreen />
         <Navbar />
         <div className="page">
-          <Route exact path="/" component={GMap} />
-          <Route path="/lunch" component={Lunch} />
+          <Route path="/map" component={GMap} />
+          <Route exact path="/" component={Lunch} />
           <Route path="/internets" component={Internets} />
         </div>
         <FooterNav />

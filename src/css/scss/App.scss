@@ -8,7 +8,9 @@
 
 @import 'spashscreen.scss';
 
-// Navigation
+////////////////////////////////////////////////////////////////////////////////
+// NAVIGATION
+////////////////////////////////////////////////////////////////////////////////
 
 .navbar {
   background: $primary-color;
@@ -18,7 +20,9 @@
   top: 0;
   right: 0;
   left: 0;
-  padding: 2rem 0.75rem 0.25rem 0.75rem;
+  height: 60px;
+  padding: 1rem 0.75rem 0.25rem 0.75rem;
+  box-shadow: 0 -0.5rem 1.25rem rgba(0, 0, 0, 1);
   > div {
     img {
       height: 32px;
@@ -34,7 +38,7 @@
       font-weight: 500;
       font-size: 20px;
       text-align: center;
-      line-height: 32px;
+      line-height: 36px;
       letter-spacing: 0.05rem;
       color: white;
     }
@@ -45,6 +49,8 @@
   background: $dark-gray;
   color: white;
   position: fixed;
+  overflow: scroll;
+  z-index: 10;
   padding: 0.75rem 0.75rem 0.25rem 0.75rem;
   bottom: 0;
   right: 0;
@@ -70,16 +76,28 @@
   }
 }
 
-// Content
+////////////////////////////////////////////////////////////////////////////////
+// CONTENT
+////////////////////////////////////////////////////////////////////////////////
+.App {
+  height: 100vh;
+}
 
 .page {
-  margin-top: 76px;
+  margin-top: 60px;
+  margin-bottom: 69px;
   .row:first-of-type {
     padding-top: 0.75rem;
   }
 
+  // Internets ///////////////////////////////////////////////////////////////////
   .internets {
     height: 100%;
+    iframe {
+      position: absolute !important;
+      top: 60px;
+      bottom: 0;
+    }
   }
 
   .subpageLoader {
@@ -99,6 +117,7 @@
     }
   }
 
+  // Map /////////////////////////////////////////////////////////////////////////
   .googleMap {
     position: relative !important;
     height: 400px !important;
@@ -106,7 +125,7 @@
     left: 0;
   }
   .selectedRestaurant {
-    background: $primary-color;
+    background: #34b379;
     color: white;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -120,40 +139,84 @@
   }
   .selectedRestaurantInfo {
     padding-top: 1rem;
+    p {
+    }
+  }
+  .mapContainer {
+    position: relative;
+    overflow: hidden;
   }
 
+  #listDrawer {
+    position: absolute;
+    left: 90vw;
+    height: 100%;
+    width: 100vw;
+    overflow-x: hidden;
+    top: 0px;
+    z-index: 8;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.4s;
 
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  #listDrawer.openDrawer {
+    padding-left: 10vw;
+    left: 0vw;
+    &::before {
+      left: 0;
+      width: 10vw;
+    }
+  }
+
+  // Lunch ///////////////////////////////////////////////////////////////////////
+  .lunch:first-of-type {
+    padding-top: 0;
+  }
   .restaurantListItem {
     background: none;
     color: white;
-    height: 20vh;
+    height: 180px;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     h2 {
       font-weight: 500;
-      margin: 0 0 0 .75rem;
+      margin: 0 0 0 0.75rem;
+      font-size: 1rem;
     }
     h3 {
-      margin: 0 0 .75rem .75rem;
+      margin: 0 0 0.75rem 0.75rem;
+      font-size: 0.75rem;
     }
     img {
       position: absolute;
-      height: 20vh;
+      height: 180px;
       width: 100%;
       object-fit: cover;
       z-index: -2;
     }
-
   }
   .restaurantListItem::after {
-      display: block;
-      position: relative;
-      background-image: linear-gradient(to bottom, transparent 30%, rgba(0,0,0, 0.8) 100%);
-      margin-top: -20vh;
-      height: 20vh;
-      width: 100%;
-      z-index: -1;
-      content: ' ';
+    display: block;
+    position: relative;
+    background-image: linear-gradient(
+      to bottom,
+      transparent 30%,
+      rgba(0, 0, 0, 0.6) 100%
+    );
+    margin-top: -180px;
+    height: 180px;
+    width: 100%;
+    z-index: -1;
+    pointer-events: none;
+    content: ' ';
   }
 }

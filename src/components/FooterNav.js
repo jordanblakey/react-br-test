@@ -18,7 +18,7 @@ class FooterNav extends Component {
 
   componentWillMount() {
     if (
-      window.location.href.split('/').pop() === 'lunch' &&
+      window.location.href.split('/').pop() === '' &&
       this.state.lunchActive === false
     ) {
       this.setState({ lunchActive: true })
@@ -41,7 +41,7 @@ class FooterNav extends Component {
     }
 
     if (
-      window.location.href.split('/').pop() !== 'lunch' &&
+      window.location.href.split('/').pop() !== '' &&
       this.state.lunchActive === true
     ) {
       this.setState({ lunchActive: false })
@@ -64,7 +64,7 @@ class FooterNav extends Component {
           onClick={this.handleLunchClick}
           className={this.state.lunchActive ? null : 'inactive'}
         >
-          <Link to="/lunch">
+          <Link to="/">
             <img src={tab_lunch} alt="hot dog icon" />
             <br />
             <span>lunch</span>
