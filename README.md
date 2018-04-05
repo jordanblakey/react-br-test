@@ -1,6 +1,12 @@
 # react-br-test
 React UI technical interview assignment.
 
+## Quick Start
+- Clone the repo
+- cd into the root folder
+- `yarn`
+- `yarn start`
+
 ## Assignment Introduction
 
 The intent of this coding test is to assess your ability to work with requirements commonly seen at Bottle Rocket. We want you to display your knowledge of software design patterns, HTML-CSS-Javascript best practices, responsive web design, and working with art comps from our creative team.
